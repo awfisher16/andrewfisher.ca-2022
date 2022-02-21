@@ -1,56 +1,25 @@
-title: Jesse McGinnis
-email: jesse@jcmcginnis.com
+title: Andrew Fisher
+email: andrew@andrewfisher.ca
 description: >-
   Jesse McGinnis in Waterloo, Canada.
   Solving impactful and complex software problems.
 
-url: "https://jcmcginnis.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://andrewfisher.ca" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "/"
 permalink: pretty
-
-logo:
-  logo_desktop_image: assets/images/logo/logo.svg
-  logo_desktop_text: "Jesse <strong>McGinnis</strong>"
-  logo_mobile_image: assets/images/logo/logo-mobile.svg
-  logo_mobile_text: ""
-  logo_desktop_height: "36px"
-  logo_desktop_width: "36px"
-  logo_mobile_height: "36px"
-  logo_mobile_width: "36px"
-
-seo:
-  meta_twitter_site: "@elsom25"
-  meta_twitter_creator: "@elsom25"
-  # meta_og_image: "https://www.zerostatic.io/theme/jekyll-atlantic/jekyll-atlantic-screenshot.png"
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
 plugins:
   - jekyll-environment-variables
-  - jekyll-feed
   - jekyll-postcss
 
-collections:
-  posts:
-    output: true
-    permalink: /blog/:path/
-
 defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: post
   - scope:
       path: "images"
     values:
       image: true
-  - scope:
-      path: "categories"
-    values:
-      layout: category
-      permalink: /category/:basename/
 
 exclude:
   - Gemfile
