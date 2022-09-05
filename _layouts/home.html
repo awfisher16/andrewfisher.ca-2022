@@ -3,83 +3,6 @@ layout: base
 ---
 
 <div id="main">
-    <div x-data="{triggerNavItem(id) {$scroll(id)},triggerMobileNavItem(id) {$parent.mobileMenu = false; this.triggerNavItem(id)}}">
-        <div class="w-full z-50 top-0 py-3 sm:py-5  absolute  ">
-            <div class="container flex justify-end items-center">
-                <div class="hidden lg:block">
-
-                    <ul class="flex items-center">
-                        <li class="group pl-6">
-                            <span @click="triggerNavItem('#about')"class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">About</span>
-                            <span class="block w-full h-0.5 bg-transparent group-hover:bg-yellow"></span>
-                        </li>
-
-                        <li class="group pl-6">
-                            <span @click="triggerNavItem('#projects')"class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Projects</span>
-                            <span class="block w-full h-0.5 bg-transparent group-hover:bg-yellow"></span>
-                        </li>
-
-                        <li class="group pl-6">
-                            <span @click="triggerNavItem('#work')"class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Experience</span>
-                            <span class="block w-full h-0.5 bg-transparent group-hover:bg-yellow"></span>
-                        </li>
-
-                        <li class="group pl-6">
-                            <span @click="triggerNavItem('#statistics')"class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Statistics</span>
-                            <span class="block w-full h-0.5 bg-transparent group-hover:bg-yellow"></span>
-                        </li>
-
-                        <li class="group pl-6">
-                            <span @click="triggerNavItem('#contact')"class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Contact</span>
-                            <span class="block w-full h-0.5 bg-transparent group-hover:bg-yellow"></span>
-                        </li>
-                    </ul>
-
-                </div>
-
-                <div class="block lg:hidden">
-                    <button @click="$parent.mobileMenu = true"><i class='bx bx-menu text-white text-4xl'></i></button>
-                </div>
-                
-            </div>
-        </div>
-
-
-        <div class="fixed inset-0 bg-black bg-opacity-70 z-50 min-h-screen lg:hidden transition-opacity opacity-0 pointer-events-none":class="{ 'opacity-100 pointer-events-auto': $parent.mobileMenu }">
-            <div class="w-2/3 md:w-1/3 bg-primary min-h-screen absolute right-0 shadow py-4 px-8">
-
-                <button class="absolute top-0 right-0 mt-4 mr-4" @click="$parent.mobileMenu = false">
-                    <img src="/assets/img/icon-close.svg" class="h-10 w-auto" alt="">
-                </button>
-
-                <ul class="flex flex-col mt-8">
-
-                    <li class="py-2">
-                        <span @click="triggerMobileNavItem('#about')"class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">About</span>
-                    </li>
-
-                    <li class="py-2">
-                        <span @click="triggerMobileNavItem('#projects')"class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Projects</span>
-                    </li>
-
-                    <li class="py-2">
-                        <span @click="triggerMobileNavItem('#work')"class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Experience</span>
-                    </li>
-
-                    <li class="py-2">
-                        <span @click="triggerMobileNavItem('#statistics')"class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Statistics</span>
-                    </li>
-
-                    <li class="py-2">
-                        <span @click="triggerMobileNavItem('#contact')"class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Contact</span>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
     <div>
         <div class="bg-center bg-cover bg-no-repeat relative py-8"style="background-image: url(/assets/img/bg-hero.jpg);">
 
@@ -136,7 +59,7 @@ layout: base
                     <h2 class="font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase">Who am I?</h2>
                     <h4 class="font-header font-medium text-black text-xl sm:text-2xl lg:text-3xl pt-6">I'm Andrew Fisher, a Structural Engineer</h4>
                     <p class="font-body text-grey-20 pt-6 leading-relaxed">I thrive on complex problems which require innovative and creative design ideas. I am effective at collaborating with the consultant team, contractor, and client in order to evolve these ideas into practical, cost effective, and desirable solutions.</p>
-                    
+
                     <div class="flex flex-col sm:flex-row justify-center lg:justify-start pt-6">
 
                         <div class="flex justify-center sm:justify-start items-center">
@@ -212,51 +135,13 @@ layout: base
             <h2 class="font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center">Check out my Portfolio</h2>
             <h3 class="font-header font-medium text-black text-xl sm:text-2xl lg:text-3xl pt-6 text-center">Here's what I have done in the past</h3>
 
-            <div class="w-full sm:w-3/4 lg:w-full mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-10 pt-12">
+            <div class="w-full sm:w-3/4 lg:w-full mx-auto grid lg:grid-cols-3 gap-8 md:gap-10 pt-12">
                 {% for portfolio in site.portfolio %}
-                    <h3 class="text-lg font-semibold"><a class="hover:text-rose-800" href="{{ portfolio.url | relative_url }}">{{ portfolio.title }}</a></h3>
-                    <h4><a href="{{ post.url | relative_url }}">{{ portfolio.description }}</a></h4>   
+                    <a href="{{ portfolio.url | relative_url }}" class="mx-auto md:mx-0 transition-all transform hover:scale-105 {{ portfolio.image-size }}">
+                        <img src="{{ portfolio.image }}" class="shadow w-full" alt="portfolio image">
+                        <div class="font-body font-semibold text-grey-20 text-lg uppercase text-center">{{ portfolio.title }}, {{ portfolio.location }}</div>
+                    </a>
                 {% endfor %}
-                <a href="/" class="mx-auto md:mx-0 transition-all transform hover:scale-105 row-span-2">
-                    <img src="/assets/img/portfolio-M1&M2.jpg" class="shadow w-full" alt="portfolio image">
-                    <div class="font-body font-semibold text-grey-20 text-lg uppercase text-center">M1 & M2 at M-City, Mississauga</div>
-                </a>
-                <a href="/" class="mx-auto md:mx-0 transition-all transform hover:scale-105 row-span-2 items-end">
-                    <img src="/assets/img/portfolio-M3.jpg" class="shadow w-full" alt="portfolio image">
-                    <div class="font-body font-semibold text-grey-20 text-lg uppercase text-center">M3 at M-City, Mississauga</div>
-                </a>
-                <a href="/" class="mx-auto md:mx-0 transition-all transform hover:scale-105 row-span-2">
-                    <img src="/assets/img/portfolio-livmorehighpark.jpeg" class="shadow w-full" alt="portfolio image">
-                    <div class="font-body font-semibold text-grey-20 text-lg uppercase text-center">Livemore High Park, Toronto</div>
-                </a>
-                <a href="/" class="mx-auto md:mx-0 transition-all transform hover:scale-105 row-span-2">
-                    <img src="/assets/img/portfolio-160frontwest.jpeg" class="shadow w-full" alt="portfolio image">
-                    <div class="font-body font-semibold text-grey-20 text-lg uppercase text-center">160 Front West, Toronto</div>
-                </a>
-                <a href="/" class="mx-auto md:mx-0 transition-all transform hover:scale-105">
-                    <img src="/assets/img/portfolio-tides.jpeg" class="shadow w-full" alt="portfolio image">
-                    <div class="font-body font-semibold text-grey-20 text-lg uppercase text-center">The Tides, Grand Bend</div>
-                </a>  
-                <a href="/" class="mx-auto md:mx-0 transition-all transform hover:scale-105">
-                    <img src="/assets/img/portfolio-carlyle.jpeg" class="shadow w-full" alt="portfolio image">
-                    <div class="font-body font-semibold text-grey-20 text-lg uppercase text-center">The Carlyle, Grand Bend</div>
-                </a>
-                <a href="/" class="mx-auto md:mx-0 transition-all transform hover:scale-105">
-                    <img src="/assets/img/portfolio-morganpark.jpg" class="shadow w-full" alt="portfolio image">
-                    <div class="font-body font-semibold text-grey-20 text-lg uppercase text-center">Muse at Morgan Park, London</div>
-                </a>
-                <a href="/" class="mx-auto md:mx-0 transition-all transform hover:scale-105">
-                    <img src="/assets/img/portfolio-530oxford.jpg" class="shadow w-full" alt="portfolio image">
-                    <div class="font-body font-semibold text-grey-20 text-lg uppercase text-center">530 Oxford Phase 2, London</div>
-                </a>
-                <a href="/" class="mx-auto md:mx-0 transition-all transform hover:scale-105 col-span-2">
-                    <img src="/assets/img/portfolio-lock21.jpg" class="shadow w-full" alt="portfolio image">
-                    <div class="font-body font-semibold text-grey-20 text-lg uppercase text-center">Lock 21, Peterborough</div>
-                </a>
-                <a href="/" class="mx-auto md:mx-0 transition-all transform hover:scale-105 col-span-2">
-                    <img src="/assets/img/portfolio-cambridgemillcondos.jpeg" class="shadow w-full" alt="portfolio image">
-                    <div class="font-body font-semibold text-grey-20 text-lg uppercase text-center">Cambridge Mill Condos, Cambridge</div>
-                </a>
             </div>
         </div>
 
@@ -278,9 +163,9 @@ layout: base
                     <div class="md:w-4/5">
                         <div class="flex md:pl-18 relative">
                             <span class="border-2 border-grey-40 rounded-full w-4 h-4 absolute left-8 top-1 bg-white hidden md:block"></span>
-                            <div class="mt-1 flex">
+                            <div class="mt-1 flex grow">
                                 <i class='bx bxs-right-arrow text-primary hidden md:block'></i>
-                                <div class="md:pl-8 md:-mt-1">
+                                <div class="md:pl-8 md:-mt-1 grow">
                                     <span class="font-body font-bold text-grey-40 block">Sep 2022 - present</span>
                                     <span class="font-header font-bold text-xl text-primary uppercase block pt-2">Intermediate Structural Engineer</span>
                                     <div class="pt-2">
@@ -302,9 +187,9 @@ layout: base
                     <div class="md:w-4/5">
                         <div class="flex md:pl-18 relative">
                             <span class="border-2 border-grey-40 rounded-full w-4 h-4 absolute left-8 top-1 bg-white hidden md:block"></span>
-                            <div class="mt-1 flex">
+                            <div class="mt-1 flex grow">
                                 <i class='bx bxs-right-arrow text-primary hidden md:block'></i>
-                                <div class="md:pl-8 md:-mt-1">
+                                <div class="md:pl-8 md:-mt-1 grow">
                                     <span class="font-body font-bold text-grey-40 block">Sep 2020 - Sep 2022</span>
                                     <span class="font-header font-bold text-xl text-primary uppercase block pt-2">Intermediate Structural Engineer</span>
                                     <div class="pt-2">
@@ -326,9 +211,9 @@ layout: base
                     <div class="md:w-4/5">
                         <div class="flex md:pl-18 relative">
                             <span class="border-2 border-grey-40 rounded-full w-4 h-4 absolute left-8 top-1 bg-white hidden md:block"></span>
-                            <div class="mt-1 flex">
+                            <div class="mt-1 flex grow">
                                 <i class='bx bxs-right-arrow text-primary hidden md:block'></i>
-                                <div class="md:pl-8 md:-mt-1">
+                                <div class="md:pl-8 md:-mt-1 grow">
                                     <span class="font-body font-bold text-grey-40 block">Jun 2016 - Sep 2020</span>
                                     <span class="font-header font-bold text-xl text-primary uppercase block pt-2">Structural Design Engineer</span>
                                     <div class="pt-2">
@@ -351,9 +236,9 @@ layout: base
                     <div class="md:w-4/5">
                         <div class="flex md:pl-18 relative">
                             <span class="border-2 border-grey-40 rounded-full w-4 h-4 absolute left-8 top-1 bg-white hidden md:block"></span>
-                            <div class="mt-1 flex">
+                            <div class="mt-1 flex grow">
                                 <i class='bx bxs-right-arrow text-primary hidden md:block'></i>
-                                <div class="md:pl-8 md:-mt-1">
+                                <div class="md:pl-8 md:-mt-1 grow">
                                     <span class="font-body font-bold text-grey-40 block">Sep 2013 - Dec 2015</span>
                                     <span class="font-header font-bold text-xl text-primary uppercase block pt-2">Undergraduate Teaching Assistant</span>
                                     <div class="pt-2">
@@ -376,9 +261,9 @@ layout: base
                     <div class="md:w-4/5">
                         <div class="flex md:pl-18 relative">
                             <span class="border-2 border-grey-40 rounded-full w-4 h-4 absolute left-8 top-1 bg-white hidden md:block"></span>
-                            <div class="mt-1 flex">
+                            <div class="mt-1 flex grow">
                                 <i class="bx bxs-right-arrow text-primary hidden md:block"></i>
-                                <div class="md:pl-8 md:-mt-1">
+                                <div class="md:pl-8 md:-mt-1 grow">
                                     <span class="font-body font-bold text-grey-40 block">May 2013 - Aug 2013</span>
                                     <span class="font-header font-bold text-xl text-primary uppercase block pt-2">Technical Project Coordinator</span>
                                     <div class="pt-2">

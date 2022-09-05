@@ -2,30 +2,40 @@
 layout: base
 ---
 
-<header class="pt-10 md:pt-16 mb-10 md:mb-16 mx-auto lg:w-10/12 md:text-center">
-  <div class="text-lg">{{ page.date | date: "%B %e, %Y" }}</div>
-  <h1 class="heading text-4xl md:text-6xl font-bold font-sans md:leading-tight">
-    {{ page.title }}
-  </h1>
-  {% if page.description %}
-    <h2 class="text-xl mt-2">{{ page.description }}</h2>
-  {% endif %}
-</header>
+<div id="portfolio">
+    <div class="bg-center bg-no-repeat bg-cover h-24 relative py-8"style="background-image: url(/assets/img/bg-hero.jpg);">
+        <div
+            class="bg-center bg-cover bg-no-repeat absolute inset-0 z-20 bg-gradient-to-r from-hero-gradient-from to-hero-gradient-to">
+        </div>
+    </div>
 
-{% if page.image %}
-  <img width="1600" height="900" src="{{ page.image }}" alt="" />
-{% else %}
-  <div class="flex items-center w-1/4 mx-auto" aria-hidden="true">
-    <span aria-hidden="true" class="flex-grow bg-neutral-300 dark:bg-neutral-600 rounded h-0.5"></span>
-    <svg xmlns="http://www.w3.org/2000/svg" class="inline fill-neutral-400 dark:fill-neutral-500 h-5 w-5 mx-3" viewBox="0 0 20 20" fill="currentColor">
-      <path fill-rule="evenodd"
-        d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
-        clip-rule="evenodd" />
-    </svg>
-    <span aria-hidden="true" class="flex-grow bg-neutral-300 dark:bg-neutral-600 rounded h-0.5"></span>
-  </div>
-{% endif %}
+    <header class="pt-10 md:pt-16 mb-10 md:mb-16 mx-auto lg:w-10/12 md:text-center">
+        <h1 class="heading text-4xl md:text-6xl font-bold font-sans md:leading-tight">
+          {{ page.title }}
+        </h1>
+        {% if page.description %}
+          <h2 class="text-xl mt-2">{{ page.description }}</h2>
+        {% endif %}
+      </header>
+      
+      {% if page.image %}
+        <img width="1600" height="900" src="{{ page.image }}" alt="" />
+      {% else %}
+        <div class="flex items-center w-1/4 mx-auto" aria-hidden="true">
+          <span aria-hidden="true" class="flex-grow bg-neutral-300 dark:bg-neutral-600 rounded h-0.5"></span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="inline fill-neutral-400 dark:fill-neutral-500 h-5 w-5 mx-3" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+              clip-rule="evenodd" />
+          </svg>
+          <span aria-hidden="true" class="flex-grow bg-neutral-300 dark:bg-neutral-600 rounded h-0.5"></span>
+        </div>
+      {% endif %}
+      
+      <article class="my-10 md:my-16 mx-auto max-w-prose prose prose-neutral prose-a:underline hover:prose-a:text-rose-800 md:prose-lg lg:prose-xl dark:prose-invert">
+        {{ content }}
+      </article>
+    
+</div>
 
-<article class="my-10 md:my-16 mx-auto max-w-prose prose prose-neutral prose-a:underline hover:prose-a:text-rose-800 md:prose-lg lg:prose-xl dark:prose-invert">
-  {{ content }}
-</article>
+<script src="/assets/js/main.js"></script>

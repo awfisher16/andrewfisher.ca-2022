@@ -20,7 +20,70 @@
     <script src="https://cdn.jsdelivr.net/gh/alpine-collective/alpine-magic-helpers@1.1.x/dist/index.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
   </head>
+
   <body class="page {{page.bodyClass}}" id="page-top" :class="{ 'overflow-hidden max-h-screen': mobileMenu }" x-data="{ mobileMenu: false }">
+    <div x-data="{triggerNavItem(id) {$scroll(id)},triggerMobileNavItem(id) {$parent.mobileMenu = false; this.triggerNavItem(id)}}">
+      <div class="w-full z-50 top-0 py-3 sm:py-5  absolute  ">
+        <div class="container flex justify-end items-center">
+          <div class="hidden lg:block">
+            <ul class="flex items-center">
+                <li class="group pl-6">
+                    <span @click="triggerNavItem('#about')"class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">About</span>
+                    <span class="block w-full h-0.5 bg-transparent group-hover:bg-yellow"></span>
+                </li>
+
+                <li class="group pl-6">
+                    <span @click="triggerNavItem('#projects')"class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Projects</span>
+                    <span class="block w-full h-0.5 bg-transparent group-hover:bg-yellow"></span>
+                </li>
+
+                <li class="group pl-6">
+                    <span @click="triggerNavItem('#work')"class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Experience</span>
+                    <span class="block w-full h-0.5 bg-transparent group-hover:bg-yellow"></span>
+                </li>
+
+                <li class="group pl-6">
+                    <span @click="triggerNavItem('#statistics')"class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Statistics</span>
+                    <span class="block w-full h-0.5 bg-transparent group-hover:bg-yellow"></span>
+                </li>
+            </ul>
+          </div>
+
+          <div class="block lg:hidden">
+              <button @click="$parent.mobileMenu = true"><i class='bx bx-menu text-white text-4xl'></i></button>
+          </div>   
+
+        </div>
+      </div>  
+    
+      <div class="fixed inset-0 bg-black bg-opacity-70 z-50 min-h-screen lg:hidden transition-opacity opacity-0 pointer-events-none":class="{ 'opacity-100 pointer-events-auto': $parent.mobileMenu }">
+        <div class="w-2/3 md:w-1/3 bg-primary min-h-screen absolute right-0 shadow py-4 px-8">
+
+          <button class="absolute top-0 right-0 mt-4 mr-4" @click="$parent.mobileMenu = false">
+              <img src="/assets/img/icon-close.svg" class="h-10 w-auto" alt="">
+          </button>
+
+          <ul class="flex flex-col mt-8">
+              <li class="py-2">
+                  <span @click="triggerMobileNavItem('#about')"class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">About</span>
+              </li>
+
+              <li class="py-2">
+                  <span @click="triggerMobileNavItem('#projects')"class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Projects</span>
+              </li>
+
+              <li class="py-2">
+                  <span @click="triggerMobileNavItem('#work')"class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Experience</span>
+              </li>
+
+              <li class="py-2">
+                  <span @click="triggerMobileNavItem('#statistics')"class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Statistics</span>
+              </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
     {{ content }}
   </body>
 </html>
