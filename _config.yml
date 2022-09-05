@@ -15,9 +15,20 @@ plugins:
   - jekyll-environment-variables
   - jekyll-postcss
 
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:title/
+    sort_by: weight
+
 defaults:
   - scope:
-      path: "images"
+      path: ""
+      type: portfolio
+    values:
+      layout: portfolio
+  - scope:
+      path: "img"
     values:
       image: true
 
