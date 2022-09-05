@@ -6,7 +6,7 @@ location:   Mississauga
 permalink:  /portfolio/m3-at-mcity/
 weight:     20
 
-description: Transitioning to a new team is hard, doubly so as a leader.
+description: 81 Storeys; 261 m Tall; Reinforced Concrete Slabs and Walls
 
 image:      "/assets/img/portfolio-M3.jpg"
 image-size: row-span-2

@@ -6,7 +6,7 @@ location:   London
 permalink:  /portfolio/530-oxford/
 weight:     80
 
-description: Transitioning to a new team is hard, doubly so as a leader.
+description: 2 Storeys; Metal Decking on Structural Steel with Reinforced Concrete Walls
 
 image:      "/assets/img/portfolio-530oxford.jpg"
 image-size: ""

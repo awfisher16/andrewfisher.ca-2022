@@ -6,7 +6,7 @@ location:   London
 permalink:  /portfolio/muse-at-morgan/
 weight:     70
 
-description: Transitioning to a new team is hard, doubly so as a leader.
+description: Two Towers; 12 & 16 Storeys; Hambro Composite Floors with Reinforced Concrete Walls
 
 image:      "/assets/img/portfolio-morganpark.jpg"
 image-size: ""

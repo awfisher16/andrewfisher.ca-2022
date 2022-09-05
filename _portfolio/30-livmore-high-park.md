@@ -6,7 +6,7 @@ location:   Toronto
 permalink:  /portfolio/livemore-high-park/
 weight:     30
 
-description: Transitioning to a new team is hard, doubly so as a leader.
+description: Two Towers; 25 Storeys; 82 m tall; Reinforced Concrete Slabs and Walls
 
 image:      "/assets/img/portfolio-livmorehighpark.jpeg"
 image-size: row-span-2

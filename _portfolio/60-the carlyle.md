@@ -6,7 +6,7 @@ location:   Grand Bend
 permalink:  /portfolio/the-carlyle/
 weight:     60
 
-description: Transitioning to a new team is hard, doubly so as a leader.
+description: 3 Storeys; Hollowcore Precast Planks on Structural Steel with Masonry Walls
 
 image:      "/assets/img/portfolio-carlyle.jpeg" 
 image-size: ""

@@ -6,7 +6,7 @@ location:   Cambridge
 permalink:  /portfolio/cambridge-mill-condos/
 weight:     100
 
-description: Transitioning to a new team is hard, doubly so as a leader.
+description: Two Towers; 37 & 28 Storeys; 143 m & 112 m Tall; Reinforced Concrete Slabs and Walls
 
 image:      "/assets/img/portfolio-cambridgemillcondos.jpeg"
 image-size: col-span-2

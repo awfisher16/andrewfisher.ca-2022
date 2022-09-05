@@ -6,7 +6,7 @@ location:   Toronto
 permalink:  /portfolio/160-front-west/
 weight:     40
 
-description: Transitioning to a new team is hard, doubly so as a leader.
+description: 46 Storeys; 240 m Tall; Metal Decking on Structural Steel with Reinforced Concrete Walls
 
 image:      "/assets/img/portfolio-160frontwest.jpeg"
 image-size: row-span-2

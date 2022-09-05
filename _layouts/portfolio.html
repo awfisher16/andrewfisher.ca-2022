@@ -9,13 +9,9 @@ layout: base
         </div>
     </div>
 
-    <header class="pt-10 md:pt-16 mb-10 md:mb-16 mx-auto lg:w-10/12 md:text-center">
-        <h1 class="heading text-4xl md:text-6xl font-bold font-sans md:leading-tight">
-          {{ page.title }}
-        </h1>
-        {% if page.description %}
-          <h2 class="text-xl mt-2">{{ page.description }}</h2>
-        {% endif %}
+    <header class="container py-16 md:py-20">
+        <h1 class="font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center">{{ page.title }}</h1>
+        <h2 class="font-header font-medium text-black text-xl sm:text-2xl lg:text-3xl pt-6 text-center">{{ page.description }}</h2>
     </header>
       
     {% if page.image %}
