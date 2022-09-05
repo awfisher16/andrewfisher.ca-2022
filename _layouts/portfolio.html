@@ -8,12 +8,24 @@ layout: base
             class="bg-center bg-cover bg-no-repeat absolute inset-0 z-20 bg-gradient-to-r from-hero-gradient-from to-hero-gradient-to">
         </div>
     </div>
-
+    
     <header class="container py-16 md:py-20">
-        <h1 class="font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center">{{ page.title }}</h1>
+        <div class="flex grow items-center justify-center">
+            {% if page.previous.url %}
+                <a href="{{page.previous.url}}" class="flex grow justify-start"><i class='bx bx-chevron-left text-primary text-4xl sm:text-5xl lg:text-6xl'></i></a>
+            {% else %}
+                <a href="{{site.portfolio.last.url}}" class="flex grow justify-start"><i class='bx bx-chevron-left text-primary text-4xl sm:text-5xl lg:text-6xl'></i></a>
+            {% endif %}
+            <h1 class="font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center">{{ page.title }}</h1>
+            {% if page.next.url %}
+                <a href="{{page.next.url}}" class="flex grow justify-end"><i class='bx bx-chevron-right text-primary text-4xl sm:text-5xl lg:text-6xl'></i></a>
+            {% else %}
+                <a href="{{site.portfolio.first.url}}" class="flex grow justify-end"><i class='bx bx-chevron-right text-primary text-4xl sm:text-5xl lg:text-6xl'></i></a>
+            {% endif %}
+        </div>
         <h2 class="font-header font-medium text-black text-xl sm:text-2xl lg:text-3xl pt-6 text-center">{{ page.description }}</h2>
     </header>
-      
+    
     {% if page.image %}
     <img width="1600" height="900" src="{{ page.image }}" alt="" />
     {% else %}
@@ -22,7 +34,7 @@ layout: base
         <svg xmlns="http://www.w3.org/2000/svg" class="inline fill-neutral-400 dark:fill-neutral-500 h-5 w-5 mx-3" viewBox="0 0 20 20" fill="currentColor">
         <path fill-rule="evenodd"
             d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
-            clip-rule="evenodd" />
+            clip-rule="evenodd"/>
         </svg>
         <span aria-hidden="true" class="flex-grow bg-neutral-300 dark:bg-neutral-600 rounded h-0.5"></span>
     </div>
@@ -33,5 +45,3 @@ layout: base
     </article>
     
 </div>
-
-<script src="/assets/js/main.js"></script>
