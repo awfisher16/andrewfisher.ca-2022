@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-ca">
+<html lang="en-ca" class="scroll-smooth">
   <head>
     <meta charset="utf-8">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
@@ -28,22 +28,22 @@
           <div class="hidden lg:block">
             <ul class="flex items-center">
                 <li class="group pl-6">
-                    <span @click="triggerNavItem('#about')"class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">About</span>
+                    <a href="/#about" class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">About</a>
                     <span class="block w-full h-0.5 bg-transparent group-hover:bg-yellow"></span>
                 </li>
 
                 <li class="group pl-6">
-                    <span @click="triggerNavItem('#projects')"class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Projects</span>
+                    <a href="/#projects" class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Projects</a>  
                     <span class="block w-full h-0.5 bg-transparent group-hover:bg-yellow"></span>
                 </li>
 
                 <li class="group pl-6">
-                    <span @click="triggerNavItem('#work')"class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Experience</span>
+                    <a href="/#experience" class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Experience</a>  
                     <span class="block w-full h-0.5 bg-transparent group-hover:bg-yellow"></span>
                 </li>
 
                 <li class="group pl-6">
-                    <span @click="triggerNavItem('#statistics')"class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Statistics</span>
+                    <a href="/#statistics" class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Statistics</a>  
                     <span class="block w-full h-0.5 bg-transparent group-hover:bg-yellow"></span>
                 </li>
             </ul>
@@ -64,20 +64,20 @@
           </button>
 
           <ul class="flex flex-col mt-8">
-              <li class="py-2">
-                  <span @click="triggerMobileNavItem('#about')"class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">About</span>
+              <li class="py-2">             
+                  <a href="/#about" class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">About</a>
               </li>
 
               <li class="py-2">
-                  <span @click="triggerMobileNavItem('#projects')"class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Projects</span>
+                  <a href="/#projects" class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Projects</a>
               </li>
 
               <li class="py-2">
-                  <span @click="triggerMobileNavItem('#work')"class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Experience</span>
+                  <a href="/#experience" class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Experience</a>
               </li>
 
               <li class="py-2">
-                  <span @click="triggerMobileNavItem('#statistics')"class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Statistics</span>
+                  <a href="/#statistics" class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Statistics</a> 
               </li>
           </ul>
 
@@ -85,5 +85,27 @@
       </div>
     </div>
     {{ content }}
+    <div class="bg-primary">
+      <div class="container py-6 flex flex-col sm:flex-row justify-between">
+          <p class="font-body text-white text-center md:text-left">© Copyright 2022. All right reserved, Andrew Fisher.</p>
+          <div class="flex items-center justify-center sm:justify-start pt-5 sm:pt-0">
+              <a href="mailto:andrew@andrewfisher.ca">
+                  <i class='bx bxs-envelope text-white hover:text-yellow text-2xl'></i>
+              </a>
+              <a href="https://www.linkedin.com/in/andrewwfisher/" class="pl-4">
+                  <i class='bx bxl-linkedin text-white hover:text-yellow text-2xl'></i>
+              </a>
+              <a href="https://www.facebook.com/awfisher16" class="pl-4">
+                  <i class='bx bxl-facebook-square text-white hover:text-yellow text-2xl'></i>
+              </a>
+              <a href="https://www.instagram.com/awfisher16/" class="pl-4">
+                  <i class='bx bxl-instagram text-white hover:text-yellow text-2xl'></i>
+              </a>
+              <a href="https://twitter.com/awfisher16" class="pl-4">
+                  <i class='bx bxl-twitter text-white hover:text-yellow text-2xl'></i>
+              </a>
+          </div>
+      </div>
+    </div>
   </body>
 </html>

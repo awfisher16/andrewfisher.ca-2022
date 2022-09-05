@@ -57,7 +57,7 @@ layout: base
 
                 <div class="w-full sm:w-3/4 lg:w-3/5 text-center lg:text-left">
                     <h2 class="font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase">Who am I?</h2>
-                    <h4 class="font-header font-medium text-black text-xl sm:text-2xl lg:text-3xl pt-6">I'm Andrew Fisher, a Structural Engineer</h4>
+                    <h3 class="font-header font-medium text-black text-xl sm:text-2xl lg:text-3xl pt-6">I'm Andrew Fisher, a Structural Engineer</h3>
                     <p class="font-body text-grey-20 pt-6 leading-relaxed">I thrive on complex problems which require innovative and creative design ideas. I am effective at collaborating with the consultant team, contractor, and client in order to evolve these ideas into practical, cost effective, and desirable solutions.</p>
 
                     <div class="flex flex-col sm:flex-row justify-center lg:justify-start pt-6">
@@ -139,13 +139,13 @@ layout: base
                 {% for portfolio in site.portfolio %}
                     <a href="{{ portfolio.url | relative_url }}" class="mx-auto md:mx-0 transition-all transform hover:scale-105 {{ portfolio.image-size }}">
                         <img src="{{ portfolio.image }}" class="shadow w-full" alt="portfolio image">
-                        <div class="font-body font-semibold text-grey-20 text-lg uppercase text-center">{{ portfolio.title }}, {{ portfolio.location }}</div>
+                        <h4 class="font-body font-semibold text-grey-20 text-lg uppercase text-center">{{ portfolio.title }}, {{ portfolio.location }}</h4>
                     </a>
                 {% endfor %}
             </div>
         </div>
 
-        <div class="container py-16 md:py-20" id="work">
+        <div class="container py-16 md:py-20" id="experience">
             <h2 class="font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center">My experience</h2>
             <h3 class="font-header font-medium text-black text-xl sm:text-2xl lg:text-3xl pt-6 text-center">Here's my career journey</h3>
 
@@ -288,10 +288,8 @@ layout: base
                                     alt="icon project">
                             </div>
                             <div class="md:pl-5 md:pt-0 pt-5">
-                                <h1 class="font-body font-bold md:text-4xl text-2xl text-primary">
-                                    10+</h1>
-                                <h4 class="font-header font-medium md:text-xl text-base text-grey-dark leading-loose">
-                                    Projects</h4>
+                                <h1 class="font-body font-bold md:text-4xl text-2xl text-primary">10+</h1>
+                                <h4 class="font-header font-medium md:text-xl text-base text-grey-dark leading-loose">Projects</h4>
                             </div>
                         </div>
 
@@ -301,10 +299,8 @@ layout: base
                                     alt="icon award">
                             </div>
                             <div class="md:pl-5 md:pt-0 pt-5">
-                                <h1 class="font-body font-bold md:text-4xl text-2xl text-primary">
-                                    7+</h1>
-                                <h4 class="font-header font-medium md:text-xl text-base text-grey-dark leading-loose">
-                                    Years Experience</h4>
+                                <h1 class="font-body font-bold md:text-4xl text-2xl text-primary">7+</h1>
+                                <h4 class="font-header font-medium md:text-xl text-base text-grey-dark leading-loose">Years Experience</h4>
                             </div>
                         </div>
 
@@ -315,10 +311,8 @@ layout: base
                                     alt="icon happy clients">
                             </div>
                             <div class="md:pl-5 md:pt-0 pt-5">
-                                <h1 class="font-body font-bold md:text-4xl text-2xl text-primary">
-                                    8</h1>
-                                <h4 class="font-header font-medium md:text-xl text-base text-grey-dark leading-loose">
-                                    Happy Clients</h4>
+                                <h1 class="font-body font-bold md:text-4xl text-2xl text-primary">8</h1>
+                                <h4 class="font-header font-medium md:text-xl text-base text-grey-dark leading-loose">Happy Clients</h4>
                             </div>
                         </div>
 
@@ -329,10 +323,8 @@ layout: base
                                     alt="icon puzzle">
                             </div>
                             <div class="md:pl-5 md:pt-0 pt-5">
-                                <h1 class="font-body font-bold md:text-4xl text-2xl text-primary">
-                                    99</h1>
-                                <h4 class="font-header font-medium md:text-xl text-base text-grey-dark leading-loose">
-                                    Bugs Fixed</h4>
+                                <h1 class="font-body font-bold md:text-4xl text-2xl text-primary">261</h1>
+                                <h4 class="font-header font-medium md:text-xl text-base text-grey-dark leading-loose">Metres Tall</h4>
                             </div>
                         </div>
                     </div>
@@ -340,31 +332,6 @@ layout: base
             </div>
         </div>
     </div>
-
-    <div class="bg-primary">
-        <div class="container py-6 flex flex-col sm:flex-row justify-between">
-            <p class="font-body text-white text-center md:text-left">© Copyright
-                2022. All right reserved, Andrew Fisher.</p>
-            <div class="flex items-center justify-center sm:justify-start pt-5 sm:pt-0">
-                <a href="mailto:andrew@andrewfisher.ca">
-                    <i class='bx bxs-envelope text-white hover:text-yellow text-2xl'></i>
-                </a>
-                <a href="https://www.linkedin.com/in/andrewwfisher/" class="pl-4">
-                    <i class='bx bxl-linkedin text-white hover:text-yellow text-2xl'></i>
-                </a>
-                <a href="https://www.facebook.com/awfisher16" class="pl-4">
-                    <i class='bx bxl-facebook-square text-white hover:text-yellow text-2xl'></i>
-                </a>
-                <a href="https://www.instagram.com/awfisher16/" class="pl-4">
-                    <i class='bx bxl-instagram text-white hover:text-yellow text-2xl'></i>
-                </a>
-                <a href="https://twitter.com/awfisher16" class="pl-4">
-                    <i class='bx bxl-twitter text-white hover:text-yellow text-2xl'></i>
-                </a>
-            </div>
-        </div>
-    </div>
-
 </div>
 
 <script src="/assets/js/main.js"></script>
