@@ -13,10 +13,10 @@ image-size: row-span-2
 thumbnail:  ""
 ---
 
-# Heading 1
-
-Summary M1 & M2
-
-## Heading 2
-
-typing words typing words typing words typing words
+<div id="content" class="grow">
+    <span class="font-body font-bold text-grey-40 block">Sep 2022 - present</span>
+    <span class="font-header font-bold text-xl text-primary uppercase block pt-2">Intermediate Structural Engineer</span>
+    <div class="pt-2">
+        <span class="font-body text-black block">COMING SOON</span>
+    </div>
+</div>
