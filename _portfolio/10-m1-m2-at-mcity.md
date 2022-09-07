@@ -13,7 +13,7 @@ image-size: row-span-2
 thumbnail:  ""
 ---
 
-<div id="content" class="grow">
+<div id="content">
     <span class="font-body font-bold text-grey-40 block">Sep 2022 - present</span>
     <span class="font-header font-bold text-xl text-primary uppercase block pt-2">Intermediate Structural Engineer</span>
     <div class="pt-2">

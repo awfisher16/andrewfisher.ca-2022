@@ -25,12 +25,12 @@ layout: base
         </div>
     </div>
     
-    <div class="container w-full lg:w-2/3 mx-auto flex flex-col relative pb-16">
-        <div class="flex flex-col md:flex-row text-center md:text-left md:space-x-12 justify-center md:justify-start">
-            <div class="container flex md:w-1/4 sm:w-1/2 relative">
-                <img src="{{ page.image }}" class="object-contain" alt="" />
+    <div class="container w-full lg:w-3/4 mx-auto flex flex-col relative pb-16">
+        <div class="flex flex-col md:flex-row text-center md:text-left md:space-x-12 justify-center">
+            <div class="flex relative">
+                <img src="{{ page.image }}" class="container object-contain max-h-96 max-w-fit" alt="" />
             </div>
-            <div class="flex grow relative">
+            <div class="flex relative flex-shrink-0 sm:justify-center">
                 {{ content }}
             </div>
         </div>
