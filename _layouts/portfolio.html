@@ -2,14 +2,14 @@
 layout: base
 ---
 
-<div id="portfolio">
+<main id="portfolio" >
     <div class="bg-center bg-no-repeat bg-cover h-24 relative" style="background-image: url(/assets/img/bg-hero.jpg);">
         <div
             class="bg-center bg-cover bg-no-repeat absolute inset-0 z-20 bg-gradient-to-r from-hero-gradient-from to-hero-gradient-to">
         </div>
     </div>
     
-    <header class="container py-16 md:py-20">
+    <div class="container py-16 md:py-20">
         <div class="flex grow items-center justify-center">
             {% if page.previous.url %}
                 <a href="{{page.previous.url}}" class="flex grow justify-start"><i class='bx bx-chevron-left text-primary text-4xl sm:text-5xl lg:text-6xl'></i></a>
@@ -23,7 +23,7 @@ layout: base
                 <a href="{{site.portfolio.first.url}}" class="flex grow justify-end"><i class='bx bx-chevron-right text-primary text-4xl sm:text-5xl lg:text-6xl'></i></a>
             {% endif %}
         </div>
-    </header>
+    </div>
     
     <div class="container w-full lg:w-2/3 mx-auto flex flex-col relative pb-16">
         <div class="flex flex-col md:flex-row text-center md:text-left md:space-x-12 justify-center md:justify-start">
@@ -35,4 +35,4 @@ layout: base
             </div>
         </div>
     </div>
-</div>
+</main>

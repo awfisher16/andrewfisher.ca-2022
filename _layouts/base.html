@@ -21,8 +21,8 @@
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
   </head>
 
-  <body class="page {{page.bodyClass}}" id="page-top" :class="{ 'overflow-hidden max-h-screen': mobileMenu }" x-data="{ mobileMenu: false }">
-    <div x-data="{triggerNavItem(id) {$scroll(id)},triggerMobileNavItem(id) {$parent.mobileMenu = false; this.triggerNavItem(id)}}">
+  <body class="page {{page.bodyClass}} flex flex-col min-h-screen" id="page-top" :class="{ 'overflow-hidden max-h-screen': mobileMenu }" x-data="{ mobileMenu: false }">
+    <header x-data="{triggerNavItem(id) {$scroll(id)},triggerMobileNavItem(id) {$parent.mobileMenu = false; this.triggerNavItem(id)}}">
       <div class="w-full z-50 top-0 py-3 sm:py-5  absolute  ">
         <div class="container flex justify-end items-center">
           <div class="hidden lg:block">
@@ -87,9 +87,11 @@
 
         </div>
       </div>
-    </div>
+    </header>
+    <main class="flex-grow">
     {{ content }}
-    <div class="bg-primary">
+    </main>
+    <footer class="bg-primary">
       <div class="container py-6 flex flex-col sm:flex-row justify-between">
           <p class="font-body text-white text-center md:text-left">© Copyright 2022. All rights reserved, Andrew Fisher.</p>
           <div class="flex items-center justify-center sm:justify-start pt-5 sm:pt-0">
@@ -110,6 +112,6 @@
               </a>
           </div>
       </div>
-    </div>
+    </footer>
   </body>
 </html>
