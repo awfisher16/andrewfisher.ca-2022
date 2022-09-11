@@ -2,21 +2,27 @@
 layout: portfolio
 
 title:      Cambridge Mill Condos
-location:   Cambridge
 permalink:  /portfolio/cambridge-mill-condos/
 weight:     100
 
-description: Two Towers; 37 & 28 Storeys; 143 m & 112 m Tall; Reinforced Concrete Slabs and Walls
+image:      "/assets/img/portfolio-cambridgemillcondos.jpg"
+image-size: row-span-2
 
-image:      "/assets/img/portfolio-cambridgemillcondos.jpeg"
-image-size: col-span-2
-thumbnail:  ""
+project:        One Residential Condo Tower, One Hotel Tower
+location:       Cambridge
+developer:      Pearle Hospitality
+architect:      Martin Simmons Sweers Architects
+builder:        
+height:         143 m & 112 m
+storeys:        37 & 28
+podium:         2
+underground:    2
+material:       Reinforced Concrete
+lateral:        Shear Walls
+floor:          Two-Way Slabs
+status:         TBD
 ---
 
 <div id="content">
-    <span class="font-body font-bold text-grey-40 block">Sep 2022 - present</span>
-    <span class="font-header font-bold text-xl text-primary uppercase block pt-2">Intermediate Structural Engineer</span>
-    <div class="pt-2">
-        <span class="font-body text-black block">COMING SOON</span>
-    </div>
+    <p>As the lead engineer for the Cambridge Mill project, I was responsible for coordinating the preliminary structural design with the architect and performing preliminary structural design checks. I created the ETABS analysis model for sizing the structural elements and worked through preliminary sizing of transfer elements at the feature "belt-line" and at the ground floor cutbacks at the base of the towers.</p>
 </div>

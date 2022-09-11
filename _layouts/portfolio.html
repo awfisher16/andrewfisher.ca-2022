@@ -26,12 +26,57 @@ layout: base
     </div>
     
     <div class="container w-full lg:w-3/4 mx-auto flex flex-col relative pb-16">
-        <div class="flex flex-col md:flex-row text-center md:text-left md:space-x-8 justify-center">
+        <div class="flex flex-col md:flex-row text-left md:space-x-8 justify-center">
             <div class="flex relative">
-                <img src="{{ page.image }}" class="container object-contain max-h-96 max-w-fit" alt="" />
+                <img src="{{ page.image }}" class="container object-contain max-h-96 max-w-fit"/>
             </div>
-            <div class="flex relative flex-shrink-0 sm:justify-center">
-                {{ content }}
+            <div class="flex relative justify-center pt-6 md:pt-0 max-w-prose">
+                <div>
+                    {% if page.project %}
+                        <span class="font-body text-black-40 block"><b>Project: </b>{{page.project}}</span>
+                    {% endif %}
+                    {% if page.location %}
+                        <span class="font-body text-black-40 block"><b>Location: </b>{{page.location}}</span>
+                    {% endif %}
+                    {% if page.developer %}
+                        <span class="font-body text-black-40 block"><b>Developer: </b>{{page.developer}}</span>
+                    {% endif %}
+                    {% if page.architect %}
+                        <span class="font-body text-black-40 block"><b>Architect: </b>{{page.architect}}</span>
+                    {% endif %}
+                    {% if page.builder %}
+                        <span class="font-body text-black-40 block"><b>Builder: </b>{{page.builder}}</span>
+                    {% endif %}
+                    {% if page.height %}
+                        <span class="font-body text-black-40 block"><b>Height: </b>{{page.height}}</span>
+                    {% endif %}
+                    {% if page.storeys %}
+                        <span class="font-body text-black-40 block"><b>Storeys: </b>{{page.storeys}}</span>
+                    {% endif %}
+                    {% if page.podium %} 
+                        <span class="font-body text-black-40 block"><b>Podium Storeys: </b>{{page.podium}}</span>
+                    {% endif %}
+                    {% if page.underground %}
+                        <span class="font-body text-black-40 block"><b>Below Grade Storeys: </b>{{page.underground}}</span>
+                    {% endif %}
+                    {% if page.material %}
+                        <span class="font-body text-black-40 block"><b>Structural Material: </b>{{page.material}}</span>
+                    {% endif %}
+                    {% if page.lateral %}
+                        <span class="font-body text-black-40 block"><b>Lateral System: </b>{{page.lateral}}</span>
+                    {% endif %}
+                    {% if page.floor %}
+                        <span class="font-body text-black-40 block"><b>Floor System: </b>{{page.floor}}</span>
+                    {% endif %}
+                    {% if page.status %}
+                        <span class="font-body text-black-40 block"><b>Project Status: </b>{{page.status}}</span>
+                    {% endif %}
+
+                    <div class="pt-2">
+                        <span class="font-body font-bold text-black-40 block">Contribution:</span>
+                        <span class="font-body text-black block">{{ content }}</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
