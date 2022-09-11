@@ -4,12 +4,6 @@
     <meta charset="utf-8">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-    <meta property="og:image" content="{{ https://andrewfisher.ca/assets/img/bg-hero.jpg | absolute_url | append: cacheBust }}">
-    <meta property="og:image:type" content="image/jpeg">
-    <meta property="og:type" content="Website"/>
-    <meta property="og:url" content="https://andrewfisher.ca"/>
-    <meta property="og:title" content="Andrew Fisher" />
-    <meta property="og:description" content="I'm a structural engineer who thrives on complex problems which require innovative and creative design ideas. This website is a showcase of my past projects, personal contributions, and career experiences."/>
 
     {% include meta.html %}
 
@@ -17,7 +11,14 @@
       {% assign cacheBust = site.time | date:'?v=%s' %}
     {% endunless %}
 
-    <link rel="icon" href="{{ '/favicon.png' | relative_url }}">
+    <meta property="og:image" content="{{ '/assets/img/bg-hero.jpg' | absolute_url | append: cacheBust }}">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:type" content="Website"/>
+    <meta property="og:url" content="https://andrewfisher.ca"/>
+    <meta property="og:title" content="Andrew Fisher" />
+    <meta property="og:description" content="I'm a structural engineer who thrives on complex problems which require innovative and creative design ideas. This website is a showcase of my past projects, personal contributions, and career experiences."/>
+
+    <link rel="icon" href="{{ '/favicon.png' | relative_url | append: cacheBust }}">
     
     <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect" />
     <link as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap" rel="preload" />
