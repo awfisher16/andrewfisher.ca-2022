@@ -8,7 +8,7 @@ weight:     100
 image:      "/assets/img/portfolio-cambridgemillcondos.jpg"
 image-size: row-span-2
 
-project:        One Residential Condo Tower, One Hotel Tower
+project:        One Residential Condo Tower & One Hotel Tower
 location:       Cambridge
 developer:      Pearle Hospitality
 architect:      Martin Simmons Sweers Architects
