@@ -3,9 +3,9 @@ layout: portfolio
 
 title:      Copa Cabana Expansion
 permalink:  /portfolio/copacabana/
-weight:     110
+weight:     120
 
-image:      "/assets/img/portfolio-copacabana.jpg"
+image:      "/assets/img/portfolio-copacabana.jpeg"
 image-size: row-span-2
 
 project:        Low-Rise Commercial Addition
