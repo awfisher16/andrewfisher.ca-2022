@@ -21,6 +21,11 @@ material:       Reinforced Concrete & Structural Steel
 lateral:        Shear Walls, Moment Frames, and Diagonal Braces
 floor:          Composite Steel Deck
 status:         Complete
+
+concrete:       1
+steel:          1
+masonry:        
+precast:        
 ---
 
 <div id="content">

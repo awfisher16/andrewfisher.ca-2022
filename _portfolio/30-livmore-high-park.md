@@ -21,6 +21,11 @@ material:       Reinforced Concrete
 lateral:        Shear Walls
 floor:          Two-Way Slabs
 status:         Complete
+
+concrete:       1
+steel:          1
+masonry:        
+precast:        
 ---
 
 <div id="content">

@@ -21,6 +21,11 @@ material:       Load Bearing Masonry, Structural Steel, and Precast
 lateral:        Masonry Shear Walls
 floor:          Precast Planks on Steel Beams
 status:         Awaiting Construction
+
+concrete:       
+steel:          1
+masonry:        1
+precast:        1
 ---
 
 <div id="content">

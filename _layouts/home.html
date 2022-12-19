@@ -91,12 +91,13 @@ layout: base
                 </div>
 
                 <div class="w-full sm:w-3/4 lg:w-2/5 pl-0 lg:pl-12 pt-10 lg:pt-0">
+                    
                     <div>
                         <div class="flex justify-between items-end">
                             <h4 class="font-body font-semibold text-black uppercase">Reinforced Concrete</h4>
                         </div>
                         <div class="h-3 w-full rounded-full bg-lila mt-2">
-                            <div class="h-3 rounded-full bg-primary" style="width: 85%;"></div>
+                            <div class="h-3 rounded-full bg-primary" style="width: {% include statistics_for.html tag="concrete" %};"></div>
                         </div>
                     </div>
                     <div class="pt-6">
@@ -104,7 +105,7 @@ layout: base
                             <h4 class="font-body font-semibold text-black uppercase">Structural Steel</h4>
                         </div>
                         <div class="h-3 w-full rounded-full bg-lila mt-2">
-                            <div class="h-3 rounded-full bg-primary" style="width: 50%;"></div>
+                            <div class="h-3 rounded-full bg-primary" style="width: {% include statistics_for.html tag="steel" %};"></div>
                         </div>
                     </div>
                     <div class="pt-6">
@@ -112,7 +113,7 @@ layout: base
                             <h4 class="font-body font-semibold text-black uppercase">Load Bearing Masonry</h4>
                         </div>
                         <div class="h-3 w-full rounded-full bg-lila mt-2">
-                            <div class="h-3 rounded-full bg-primary" style="width: 20%;"></div>
+                            <div class="h-3 rounded-full bg-primary" style="width: {% include statistics_for.html tag="masonry" %};"></div>
                         </div>
                     </div>
                     <div class="pt-6">
@@ -120,7 +121,7 @@ layout: base
                             <h4 class="font-body font-semibold text-black uppercase">Precast Concrete</h4>
                         </div>
                         <div class="h-3 w-full rounded-full bg-lila mt-2">
-                            <div class="h-3 rounded-full bg-primary" style="width: 35%;"></div>
+                            <div class="h-3 rounded-full bg-primary" style="width: {% include statistics_for.html tag="precast" %};"></div>
                         </div>
                     </div>
                 </div>
@@ -145,8 +146,11 @@ layout: base
 
         <div class="container pb-16 md:pb-20" id="experience">
             <h2 class="font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center">My experience</h2>
-            <h3 class="font-header font-medium text-black text-xl sm:text-2xl lg:text-3xl pt-6 text-center">Here's my career journey</h3>
-
+            <h3 class="font-header font-medium text-black text-xl sm:text-2xl lg:text-3xl pt-6 text-center">
+                <a href="https://www.linkedin.com/in/andrewwfisher/" target="_blank">
+                Here's my career journey.
+                </a>
+            </h3>
             <div class="w-full lg:w-2/3 mx-auto flex flex-col mt-12 relative">
                 <span class="absolute inset-y-0 left-1/5 ml-10 w-0.5 bg-grey-40 hidden md:block"></span>
 
@@ -165,9 +169,10 @@ layout: base
                                 <i class='bx bxs-right-arrow text-primary hidden md:block'></i>
                                 <div class="md:pl-8 md:-mt-1 grow">
                                     <span class="font-body font-bold text-grey-40 block">Sep 2022 - present</span>
-                                    <span class="font-header font-bold text-xl text-primary uppercase block pt-2">Intermediate Structural Engineer</span>
+                                    <span class="font-header font-bold text-xl text-primary uppercase block pt-2">Structural Engineer (Level 2)</span>
+                                    <span class="font-header font-bold text-l text-black uppercase block pt-2">Project Owner, Learning Officer</span>
                                     <div class="pt-2">
-                                        <span class="font-body text-black block">COMING SOON</span>
+                                        <span class="font-body text-black block">Scrum, Project Sprints, & Retrospectives&mdash;Wood Construction&mdash;Building Additions & Retrofits</span>
                                     </div>
                                 </div>
                             </div>
@@ -189,7 +194,7 @@ layout: base
                                 <i class='bx bxs-right-arrow text-primary hidden md:block'></i>
                                 <div class="md:pl-8 md:-mt-1 grow">
                                     <span class="font-body font-bold text-grey-40 block">Sep 2020 - Aug 2022</span>
-                                    <span class="font-header font-bold text-xl text-primary uppercase block pt-2">Intermediate Structural Engineer</span>
+                                    <span class="font-header font-bold text-xl text-primary uppercase block pt-2">Structural Engineer</span>
                                     <div class="pt-2">
                                         <span class="font-body text-black block">Project Coordination and Planning&mdash;Hambro, Comslab, & Precast Floor Systems&mdash;Load Bearing Masonry&mdash;REVIT Drafting&mdash;Site Inspections</span>
                                     </div>
@@ -286,7 +291,7 @@ layout: base
                                     alt="icon project">
                             </div>
                             <div class="md:pl-5 md:pt-0 pt-5">
-                                <h1 class="font-body font-bold md:text-4xl text-2xl text-primary">12+</h1>
+                                <h1 class="font-body font-bold md:text-4xl text-2xl text-primary">{{ site.portfolio | size }}+</h1>
                                 <h4 class="font-header font-medium md:text-xl text-base text-grey-dark leading-loose">Projects</h4>
                             </div>
                         </div>
@@ -309,7 +314,7 @@ layout: base
                                     alt="icon happy clients">
                             </div>
                             <div class="md:pl-5 md:pt-0 pt-5">
-                                <h1 class="font-body font-bold md:text-4xl text-2xl text-primary">10+</h1>
+                                <h1 class="font-body font-bold md:text-4xl text-2xl text-primary">11+</h1>
                                 <h4 class="font-header font-medium md:text-xl text-base text-grey-dark leading-loose">Happy Clients</h4>
                             </div>
                         </div>

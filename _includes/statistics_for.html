@@ -1,0 +1,11 @@
+{% assign portfolio_size = site.portfolio | size | times: 1.0 %}
+{% assign tag = include.tag %}
+
+{% assign total_with_tag = 0 %}
+{% for portfolio in site.portfolio %}
+    {% assign total_with_tag = total_with_tag | plus: portfolio[tag] %}
+{% endfor %}
+
+{% assign percent = total_with_tag | divided_by: portfolio_size | times: 100 | round %}
+{% assign percent = percent | plus: 20 | at_most: 100 %}
+{{ percent }}%

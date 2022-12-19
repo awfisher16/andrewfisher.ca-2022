@@ -21,6 +21,11 @@ material:       Reinforced Concrete & Structural Steel
 lateral:        Shear Walls, Moment Frames, and Diagonal Braces
 floor:          Precast Planks on Steel Beams and Deltabeams
 status:         Under Construction
+
+concrete:       
+steel:          1
+masonry:        
+precast:        1
 ---
 
 <div id="content">

@@ -21,6 +21,11 @@ material:       Reinforced Concrete
 lateral:        Shear Walls
 floor:          Hambro Composite System
 status:         Under Construction
+
+concrete:       1
+steel:          
+masonry:        
+precast:        
 ---
 
 <div id="content">

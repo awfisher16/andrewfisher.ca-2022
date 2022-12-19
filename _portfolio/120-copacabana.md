@@ -6,7 +6,7 @@ permalink:  /portfolio/copacabana/
 weight:     120
 
 image:      "/assets/img/portfolio-copacabana.jpeg"
-image-size: row-span-2
+image-size: ""
 
 project:        Low-Rise Commercial Addition
 location:       Niagara Falls
@@ -20,7 +20,12 @@ underground:
 material:       Structural Steel
 lateral:        Diagonal Braces & Moment Frames
 floor:          Composite Steel Deck
-status:         Under Construction
+status:         Complete
+
+concrete:       
+steel:          1
+masonry:        
+precast:        
 ---
 
 <div id="content">

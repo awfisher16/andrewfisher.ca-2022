@@ -21,6 +21,11 @@ material:       Reinforced Concrete & Structural Steel
 lateral:        Coupled Shear Walls
 floor:          Composite Steel Deck on Steel Beams
 status:         Under Construction
+
+concrete:       1
+steel:          1
+masonry:        
+precast:        
 ---
 
 <div id="content">
