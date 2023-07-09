@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en-ca" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+
+    <title>
+  
+    The Tides
+    -
+    Andrew Fisher
+  
+</title>
+
+
+
+<meta property="og:title" content="The Tides"/>
+
+<meta content="website" property="og:type"/>
+<meta property="og:url" content="/portfolio/the-tides/"/>
+
+  <meta property="og:image" content="https://andrewfisher.ca/assets/img/portfolio-tides.jpeg"/>
+
+
+<meta content="summary" name="twitter:card"/>
+
+
+
+
+    
+
+    <meta property="og:image" content="https://andrewfisher.ca/assets/img/bg-hero.jpg?v=1688907212">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:type" content="Website"/>
+    <meta property="og:url" content="https://andrewfisher.ca"/>
+    <meta property="og:title" content="Andrew Fisher" />
+    <meta property="og:description" content="I'm a structural engineer who thrives on complex problems which require innovative and creative design ideas. This website is a showcase of my past projects, personal contributions, and career experiences."/>
+
+    <link rel="icon" href="/favicon.png?v=1688907212">
+    
+    <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap" rel="preload" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link href="/assets/css/style.css?v=1688907212" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/gh/alpine-collective/alpine-magic-helpers@1.1.x/dist/index.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  </head>
+
+  <body class="page  flex flex-col min-h-screen" id="page-top" :class="{ 'overflow-hidden max-h-screen': mobileMenu }" x-data="{ mobileMenu: false }">
+    <header x-data="{triggerNavItem(id) {$scroll(id)},triggerMobileNavItem(id) {$parent.mobileMenu = false; this.triggerNavItem(id)}}">
+      <div class="w-full z-50 top-0 py-3 sm:py-5 absolute">
+        <div class="container flex justify-end items-center">
+          <div class="hidden lg:block">
+            <ul class="flex items-center">
+                <li class="group pl-6">
+                    <a href="/" class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Home</a>
+                    <span class="block w-full h-0.5 bg-transparent group-hover:bg-yellow"></span>
+                </li>
+                <li class="group pl-6">
+                    <a href="/#about" class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">About</a>
+                    <span class="block w-full h-0.5 bg-transparent group-hover:bg-yellow"></span>
+                </li>
+
+                <li class="group pl-6">
+                    <a href="/#projects" class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Projects</a>  
+                    <span class="block w-full h-0.5 bg-transparent group-hover:bg-yellow"></span>
+                </li>
+
+                <li class="group pl-6">
+                    <a href="/#experience" class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Experience</a>  
+                    <span class="block w-full h-0.5 bg-transparent group-hover:bg-yellow"></span>
+                </li>
+
+                <li class="group pl-6">
+                    <a href="/#statistics" class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Statistics</a>  
+                    <span class="block w-full h-0.5 bg-transparent group-hover:bg-yellow"></span>
+                </li>
+            </ul>
+          </div>
+
+          <div class="block lg:hidden">
+              <button @click="$parent.mobileMenu = true"><i class='bx bx-menu text-white text-4xl'></i></button>
+          </div>   
+
+        </div>
+      </div>  
+    
+      <div class="fixed inset-0 bg-black bg-opacity-70 z-50 min-h-screen lg:hidden transition-opacity opacity-0 pointer-events-none":class="{ 'opacity-100 pointer-events-auto': $parent.mobileMenu }">
+        <div class="w-2/3 md:w-1/3 bg-primary min-h-screen absolute right-0 shadow py-4 px-8">
+
+          <button class="absolute top-0 right-0 mt-4 mr-4" @click="$parent.mobileMenu = false">
+              <img src="/assets/img/icon-close.svg" class="h-10 w-auto" alt="">
+          </button>
+
+          <ul class="flex flex-col mt-8" @click="$parent.mobileMenu = false">
+              <li class="py-2">             
+                <a href="/" class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Home</a>
+              </li>
+            
+              <li class="py-2">             
+                  <a href="/#about" class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">About</a>
+              </li>
+
+              <li class="py-2">
+                  <a href="/#projects" class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Projects</a>
+              </li>
+
+              <li class="py-2">
+                  <a href="/#experience" class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Experience</a>
+              </li>
+
+              <li class="py-2">
+                  <a href="/#statistics" class="font-header font-semibold text-white uppercase pt-0.5 cursor-pointer">Statistics</a> 
+              </li>
+          </ul>
+
+        </div>
+      </div>
+    </header>
+    <main class="flex-grow">
+    <main id="portfolio" >
+    <div class="bg-center bg-no-repeat bg-cover h-24 relative" style="background-image: url(/assets/img/bg-hero.jpg);">
+        <div
+            class="bg-center bg-cover bg-no-repeat absolute inset-0 z-20 bg-gradient-to-r from-hero-gradient-from to-hero-gradient-to">
+        </div>
+    </div>
+    
+    <div class="container py-16 md:py-20">
+        <div class="flex grow items-center justify-center">
+            
+                <a href="/portfolio/the-carlyle/" class="flex grow justify-start"><i class='bx bx-chevron-left text-primary text-4xl sm:text-5xl lg:text-6xl'></i></a>
+            
+            <h1 class="font-header font-semibold text-primary text-4xl sm:text-5xl lg:text-6xl uppercase text-center">The Tides</h1>
+            
+                <a href="/portfolio/muse-at-morgan/" class="flex grow justify-end"><i class='bx bx-chevron-right text-primary text-4xl sm:text-5xl lg:text-6xl'></i></a>
+            
+        </div>
+    </div>
+    
+    <div class="container w-full lg:w-3/4 mx-auto flex flex-col relative pb-16">
+        <div class="flex flex-col md:flex-row text-left md:space-x-8 justify-center">
+            <div class="flex relative">
+                <img src="/assets/img/portfolio-tides.jpeg" class="container object-contain max-h-96 max-w-fit"/>
+            </div>
+            <div class="flex relative justify-center pt-6 md:pt-0 max-w-prose">
+                <div>
+                    
+                        <span class="font-body text-black-40 block"><b>Project: </b>Low-Rise Mixed-Use Building</span>
+                    
+                    
+                        <span class="font-body text-black-40 block"><b>Location: </b>Grand Bend</span>
+                    
+                    
+                        <span class="font-body text-black-40 block"><b>Developer: </b>Grand Bend Developments</span>
+                    
+                    
+                        <span class="font-body text-black-40 block"><b>Architect: </b>matter architectural studio</span>
+                    
+                    
+                        <span class="font-body text-black-40 block"><b>Builder: </b>Lester Group</span>
+                    
+                    
+                    
+                        <span class="font-body text-black-40 block"><b>Storeys: </b>3</span>
+                    
+                    
+                    
+                    
+                        <span class="font-body text-black-40 block"><b>Structural Material: </b>Load Bearing Masonry, Structural Steel, and Precast</span>
+                    
+                    
+                        <span class="font-body text-black-40 block"><b>Lateral System: </b>Masonry Shear Walls</span>
+                    
+                    
+                        <span class="font-body text-black-40 block"><b>Floor System: </b>Precast Planks on Steel Beams</span>
+                    
+                    
+                        <span class="font-body text-black-40 block"><b>Project Status: </b>Awaiting Construction</span>
+                    
+
+                    <div class="pt-2">
+                        <span class="font-body font-bold text-black-40 block">Contribution:</span>
+                        <span class="font-body text-black block"><div id="content">
+    <p>As the lead engineer for The Tides project, I was responsible for coordinating the structural design with the architect and consultant team; completing the structural design; and preparing drawings using REVIT for permit and tender submissions.</p>
+    <br />
+    <p>This project required a number of column transfers in order to accommodate the parking layout on the ground floor which was located under the building. Due to the tight floor-to-floor elevations, a number of steel beams needed to be recessed into the precast floor system to allow for wall box penetrations.</p>
+</div>
+</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+    </main>
+    <footer class="bg-primary">
+      <div class="container py-6 flex flex-col sm:flex-row justify-between">
+          <p class="font-body text-white text-center md:text-left">© Copyright 2022. All rights reserved, Andrew Fisher.</p>
+          <div class="flex items-center justify-center sm:justify-start pt-5 sm:pt-0">
+              <a href="mailto:andrew@andrewfisher.ca">
+                  <i class='bx bxs-envelope text-white hover:text-yellow text-2xl'></i>
+              </a>
+              <a href="https://www.linkedin.com/in/andrewwfisher/" target="_blank" class="pl-4">
+                  <i class='bx bxl-linkedin text-white hover:text-yellow text-2xl'></i>
+              </a>
+              <a href="https://www.facebook.com/awfisher16" target="_blank" class="pl-4">
+                  <i class='bx bxl-facebook-square text-white hover:text-yellow text-2xl'></i>
+              </a>
+              <a href="https://www.instagram.com/awfisher16/" target="_blank" class="pl-4">
+                  <i class='bx bxl-instagram text-white hover:text-yellow text-2xl'></i>
+              </a>
+              <a href="https://twitter.com/awfisher16" target="_blank" class="pl-4">
+                  <i class='bx bxl-twitter text-white hover:text-yellow text-2xl'></i>
+              </a>
+              <a href="#top" class="text-center pl-4">
+                <i class="bx bx-chevron-up text-white hover:text-yellow bg-white bg-opacity-20 text-4xl"></i>
+              </a>
+          </div>
+      </div>
+    </footer>
+  </body>
+</html>
